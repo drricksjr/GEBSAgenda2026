@@ -350,4 +350,119 @@
       <details><summary>Take Notes</summary><textarea id="note-breakfast" oninput="saveNote('breakfast')" placeholder="Add your notes here..."></textarea></details>
     </div>
 
-... (truncated in tool input) ...
+    <div class="card">
+      <div class="time">8:05 – 8:10 AM</div>
+      <h3>Welcome – Dr. Danita Eatman</h3>
+      <div class="meta">Location: Smyre Pre-Function Area</div>
+      <p class="description">Opening welcome and framing of the summit’s purpose within GEBS faculty development and academic innovation.</p>
+      <button id="btn-eatman" class="secondary" onclick="toggleSession('eatman')">Add to My Schedule</button>
+      <details><summary>Take Notes</summary><textarea id="note-eatman" oninput="saveNote('eatman')" placeholder="Add your notes here..."></textarea></details>
+    </div>
+
+    <div class="card">
+      <div class="time">8:10 – 8:15 AM</div>
+      <h3>Welcome – Dr. Ngozi Anachebe</h3>
+      <div class="meta">Location: Smyre Pre-Function Area</div>
+      <p class="description">Welcome remarks connecting the summit to broader institutional goals around teaching, learning, and student success.</p>
+      <button id="btn-anachebe" class="secondary" onclick="toggleSession('anachebe')">Add to My Schedule</button>
+      <details><summary>Take Notes</summary><textarea id="note-anachebe" oninput="saveNote('anachebe')" placeholder="Add your notes here..."></textarea></details>
+    </div>
+
+    <div class="card">
+      <div class="time">8:15 – 8:20 AM</div>
+      <h3>Welcome – Dr. Rick Kittles</h3>
+      <div class="meta">Location: Smyre Pre-Function Area</div>
+      <p class="description">Welcome remarks highlighting the role of AI in the future of research, scholarship, and biomedical science.</p>
+      <button id="btn-kittles" class="secondary" onclick="toggleSession('kittles')">Add to My Schedule</button>
+      <details><summary>Take Notes</summary><textarea id="note-kittles" oninput="saveNote('kittles')" placeholder="Add your notes here..."></textarea></details>
+    </div>
+
+    <div class="card">
+      <div class="time">8:20 – 8:25 AM</div>
+      <h3>Logistics and Summit Overview – Dr. Ernest Ricks</h3>
+      <div class="meta">Location: Smyre Pre-Function Area</div>
+      <p class="description">Overview of the day’s schedule, session flow, participation expectations, and intended summit outcomes.</p>
+      <button id="btn-logistics" class="secondary" onclick="toggleSession('logistics')">Add to My Schedule</button>
+      <details><summary>Take Notes</summary><textarea id="note-logistics" oninput="saveNote('logistics')" placeholder="Add your notes here..."></textarea></details>
+    </div>
+
+    <div class="card">
+      <div class="time">8:30 – 9:00 AM</div>
+      <h3>Opening Keynote: From Curiosity to Capability</h3>
+      <div class="meta">Facilitator: Dr. Divad Miles<br>Location: H101 - 103 (Opened)</div>
+      <p class="description">This keynote introduces the summit theme by exploring how faculty can move from initial curiosity about AI to practical academic use.</p>
+      <button id="btn-keynote" class="secondary" onclick="toggleSession('keynote')">Add to My Schedule</button>
+      <details><summary>Take Notes</summary><textarea id="note-keynote" oninput="saveNote('keynote')" placeholder="What is one AI capability you want to develop this year?"></textarea></details>
+    </div>
+
+    <h2>Morning Sessions</h2>
+
+    <div class="card">
+      <div class="time">9:10 – 9:50 AM</div>
+      <h3>Session 1: Lessons in Examsoft</h3>
+      <div class="meta">Suggested Facilitator: Dr. Maxwell<br>Location: H101 - 103 (Opened)</div>
+      <p class="description">This session focuses on practical lessons for using Examsoft to support exam delivery, assessment design, and student performance review.</p>
+      <button id="btn-examsoft" class="secondary" onclick="toggleSession('examsoft')">Add to My Schedule</button>
+      <details><summary>Take Notes</summary><textarea id="note-examsoft" oninput="saveNote('examsoft')" placeholder="What assessment problem could Examsoft help you solve?"></textarea></details>
+    </div>
+
+    <div class="card">
+      <div class="time">10:00 – 10:30 AM</div>
+      <h3>Session 2: Designing Engaging Learning Experiences with AI in an Online Environment</h3>
+      <div class="meta">Suggested Facilitator: Dr. Ernest Ricks<br>Location: H101 - 103 (Opened)</div>
+      <p class="description">This session explores how AI can help faculty design more engaging, interactive, and student-centered online learning experiences.</p>
+      <button id="btn-online" class="secondary" onclick="toggleSession('online')">Add to My Schedule</button>
+      <details><summary>Take Notes</summary><textarea id="note-online" oninput="saveNote('online')" placeholder="Where could AI make your online course more interactive?"></textarea></details>
+    </div>
+
+    <div class="card">
+      <div class="time">10:40 AM – 12:10 PM</div>
+      <h3>Session 3: Re-Designing Assessments of Learning for the Age of AI</h3>
+      <div class="meta">Facilitator: Tari Tan<br>Location: H101 - 103 (Opened)</div>
+      <p class="description">
+        This interactive session focuses on redesigning assignments and assessments, so they remain meaningful, authentic, and effective in an era of generative AI. In the first part of the session, we will introduce frameworks to guide our thinking about assessments of learning and participants will reflect on assessments within their own teaching contexts to identify opportunities for re-design in an AI-native educational context. In the second part of the session, participants will gain hands-on practice using GenAI to begin to build out a re-designed assessment. Participants should bring their laptops or other devices and be prepared to access a GenAI tool of their choice, such as ChatGPT, Co-Pilot, or Gemini, to engage with the hands-on AI activities; however, pen-and-paper brainstorming will be available as an alternative.
+      </p>
+      <button id="btn-assessments" class="secondary" onclick="toggleSession('assessments')">Add to My Schedule</button>
+      <details><summary>Take Notes</summary><textarea id="note-assessments" oninput="saveNote('assessments')" placeholder="Which assignment needs to be redesigned because of AI?"></textarea></details>
+    </div>
+
+    <h2>Lunch</h2>
+
+    <div class="card">
+      <div class="time">12:15 – 1:15 PM</div>
+      <h3>Networking Lunch and Facilitated Discussions</h3>
+      <div class="meta">Location: Smyre Pre-Function Area</div>
+      <p class="description">Lunch provides time for networking, reflection, and informal discussion about how AI is already shaping academic work.</p>
+      <button id="btn-lunch" class="secondary" onclick="toggleSession('lunch')">Add to My Schedule</button>
+      <details><summary>Take Notes</summary><textarea id="note-lunch" oninput="saveNote('lunch')" placeholder="People to connect with or ideas to revisit..."></textarea></details>
+    </div>
+
+    <h2>Afternoon Sessions</h2>
+
+    <div class="card">
+      <div class="time">1:30 – 2:30 PM</div>
+      <h3>Session 4: Supervising AI Agents in Academic Life</h3>
+      <div class="meta">Facilitators: Carlos Ponce and Tari Tan<br>Location: H101 - 103 (Opened)</div>
+      <p class="description">This session introduces AI agents and explores how faculty can supervise them as tools for teaching, research, administration, and productivity.</p>
+      <button id="btn-agents" class="secondary" onclick="toggleSession('agents')">Add to My Schedule</button>
+      <details><summary>Take Notes</summary><textarea id="note-agents" oninput="saveNote('agents')" placeholder="What task do you wish an AI agent could help with every week?"></textarea></details>
+    </div>
+
+    <div class="card">
+      <div class="time">2:40 – 4:10 PM</div>
+      <h3>Session 5: GenAI and Research Training: Integrating AI into Academic Workflows</h3>
+      <div class="meta">Facilitators: Carlos Ponce and Tari Tan<br>Location: H101 - 103 (Opened)</div>
+      <p class="description">
+        This interactive session will engage participants in discussions that highlight opportunities and considerations for integrating GenAI tools and agents into graduate biomedical training. Participants will consider applications of GenAI within their own research and research training contexts and will have the opportunity to engage with GenAI tools to further explore the potential integration of GenAI into academic workflows. Participants should bring their laptops or other devices and be prepared to access a GenAI tool of their choice, such as ChatGPT, Co-Pilot, or Gemini, to engage with the hands-on AI activities; however, pen-and-paper brainstorming will be available as an alternative.
+      </p>
+      <button id="btn-researchtraining" class="secondary" onclick="toggleSession('researchtraining')">Add to My Schedule</button>
+      <details><summary>Take Notes</summary><textarea id="note-researchtraining" oninput="saveNote('researchtraining')" placeholder="How could GenAI support research training or academic workflows?"></textarea></details>
+    </div>
+
+    <div class="card">
+      <div class="time">4:10 – 4:30 PM</div>
+      <h3>Closing Reflections and Next Steps</h3>
+      <div class="meta">Facilitators: Dr. Ernest Ricks and Dr. Danita Eatman<br>Location: H101 - 103 (Opened)</div>
+      <p class="description">The closing session gives participants time to reflect on key takeaways, identify next steps, and consider how GEBS can continue supporting AI adoption. Attendees will also be directed to the GEBS Retreat Survey.</p>
+      <button id="btn-closing" class="secondary" onclick="toggleSession('closing')">Add to My Schedule</button>
+      <details><summary>Take Notes</summary><textarea id="note-closing" oninput="saveNote('closing')
