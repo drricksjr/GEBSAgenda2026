@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GEBS AI Summit 2026 Agenda</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f6fa;
+      color: #1f2937;
+      padding-bottom: 90px;
+    }
+
+    header {
+      background: linear-gradient(135deg, #111827, #4338ca);
+      color: white;
+      padding: 28px 18px;
+      border-bottom-left-radius: 28px;
+      border-bottom-right-radius: 28px;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 30px;
+      line-height: 1.1;
+    }
+
+    header p {
+      font-size: 15px;
+      line-height: 1.5;
+      opacity: 0.9;
+    }
+
+    .container {
+      padding: 16px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .top-buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+
+    button, .tool-link {
+      border: none;
+      border-radius: 14px;
+      padding: 12px;
+      font-size: 15px;
+      font-weight: bold;
+      cursor: pointer;
+      background: #111827;
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+    }
+
+    button.secondary {
+      background: white;
+      color: #111827;
+      border: 1px solid #ddd;
+    }
+
+    button.selected {
+      background: #059669;
+      color: white;
+    }
+
+    .card {
+      background: white;
+      border-radius: 18px;
+      padding: 16px;
+      margin-bottom: 14px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      border-left: 6px solid #4338ca;
+    }
+
+    .time {
+      font-weight: bold;
+      color: #4338ca;
+      font-size: 15px;
+      margin-bottom: 6px;
+    }
+
+    h2 {
+      font-size: 22px;
+      margin-top: 24px;
+    }
+
+    h3 {
+      margin: 0 0 8px;
+      font-size: 19px;
+    }
+
+    .meta {
+      font-size: 14px;
+      color: #6b7280;
+      margin-bottom: 10px;
+      line-height: 1.4;
+    }
+
+    .description {
+      font-size: 15px;
+      line-height: 1.45;
+    }
+
+    textarea, input {
+      width: 100%;
+      margin-top: 10px;
+      padding: 12px;
+      border-radius: 12px;
+      border: 1px solid #ddd;
+      font-size: 15px;
+      font-family: Arial, Helvetica, sans-serif;
+      box-sizing: border-box;
+    }
+
+    textarea {
+      min-height: 110px;
+    }
+
+    details {
+      margin-top: 10px;
+    }
+
+    summary {
+      font-weight: bold;
+      cursor: pointer;
+      padding: 6px 0;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .nav {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: white;
+      border-top: 1px solid #ddd;
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 6px;
+      padding: 8px;
+      z-index: 20;
+    }
+
+    .nav button {
+      font-size: 11.5px;
+      padding: 9px 4px;
+      border-radius: 12px;
+    }
+
+    .schedule-item {
+      border-bottom: 1px solid #eee;
+      padding: 12px 0;
+    }
+
+    .schedule-item:last-child {
+      border-bottom: none;
+    }
+
+    .notice {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      color: #92400e;
+      border-radius: 16px;
+      padding: 12px;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 1.4;
+      margin-bottom: 14px;
+    }
+
+    .tool-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+    }
+
+    .tool-card {
+      background: white;
+      border-radius: 18px;
+      padding: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      border-left: 6px solid #7c3aed;
+    }
+
+    .tool-card h3 {
+      margin-bottom: 6px;
+    }
+
+    .tool-card p {
+      margin: 0 0 12px;
+      font-size: 14px;
+      color: #4b5563;
+      line-height: 1.4;
+    }
+
+    .tool-link {
+      width: 100%;
+      box-sizing: border-box;
+      background: linear-gradient(135deg, #111827, #4338ca);
+    }
+
+    .share-form {
+      background: white;
+      border-radius: 18px;
+      padding: 16px;
+      margin-bottom: 14px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+      border-left: 6px solid #f59e0b;
+    }
+
+    .toolkit-sticky-board {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .sticky {
+      background: #fef3c7;
+      border: 1px solid #fde68a;
+      border-radius: 16px;
+      padding: 14px;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+      transform: rotate(-0.5deg);
+      overflow-wrap: anywhere;
+    }
+
+    .sticky:nth-child(2n) {
+      background: #dbeafe;
+      border-color: #bfdbfe;
+      transform: rotate(0.5deg);
+    }
+
+    .sticky:nth-child(3n) {
+      background: #dcfce7;
+      border-color: #bbf7d0;
+      transform: rotate(-0.25deg);
+    }
+
+    .sticky h3 {
+      font-size: 17px;
+      margin-bottom: 6px;
+    }
+
+    .sticky p {
+      margin: 6px 0;
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .sticky a {
+      color: #1d4ed8;
+      font-weight: bold;
+      text-decoration: underline;
+    }
+
+    .small {
+      color: #6b7280;
+      font-size: 13px;
+      line-height: 1.35;
+    }
+
+    .danger {
+      background: #dc2626;
+      color: white;
+    }
+
+    .row-buttons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    @media (min-width: 700px) {
+      .top-buttons {
+        grid-template-columns: repeat(5, 1fr);
+      }
+
+      header {
+        padding: 38px 32px;
+      }
+
+      header h1 {
+        font-size: 42px;
+      }
+
+      .tool-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .toolkit-sticky-board {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .nav button {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>GEBS AI Summit 2026</h1>
+  <p><strong>From Curiosity to Capability</strong></p>
+  <p>
+    An interactive mobile agenda designed to help faculty move from basic curiosity
+    about AI toward practical, confident use of AI tools in teaching, assessment,
+    research, course design, and academic productivity.
+  </p>
+</header>
+
+<div class="container">
+
+  <div class="top-buttons">
+    <button onclick="showSection('agenda')">Full Agenda</button>
+    <button class="secondary" onclick="showSection('schedule')">My Schedule</button>
+    <button class="secondary" onclick="showSection('notes')">My Notes</button>
+    <button class="secondary" onclick="showSection('fun')">AI Fun</button>
+    <button class="secondary" onclick="showSection('toolkitboard')">Personal Toolkit</button>
+  </div>
+
+  <section id="agenda">
+    <div class="notice">
+      Tap “Add to My Schedule” to build your customized agenda. Notes and selected sessions save automatically on this device.
+    </div>
+
+    <h2>Breakfast & Welcome</h2>
+
+    <div class="card">
+      <div class="time">7:30 – 8:00 AM</div>
+      <h3>Breakfast</h3>
+      <div class="meta">Location: Smyre Pre-Function Area</div>
+      <p class="description">Breakfast and informal networking before the summit begins.</p>
+      <button id="btn-breakfast" class="secondary" onclick="toggleSession('breakfast')">Add to My Schedule</button>
+      <details><summary>Take Notes</summary><textarea id="note-breakfast" oninput="saveNote('breakfast')" placeholder="Add your notes here..."></textarea></details>
+    </div>
+
+... (truncated in tool input) ...
